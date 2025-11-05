@@ -444,7 +444,7 @@ wheels = [
 ]
 
 [[package]]
-name = "documentation-helper"
+name = "documentation-assistant"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
