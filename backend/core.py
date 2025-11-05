@@ -26,8 +26,13 @@ def run_llm(query: str):
     )
 
     result = qa.invoke({"input": query})
-    return result["answer"]
+    new_result = {
+        "query": result["input"],
+        "result": result["answer"],
+        "source_documents": result["context"],
+    }
+    return new_result
 
 if __name__ == "__main__":
     result = run_llm("What is the LangChain?")
-    print(result)
+    print(result["result"])
